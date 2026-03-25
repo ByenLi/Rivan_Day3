@@ -1,5 +1,5 @@
 
-<!-- Your monitor number = #$34T# -->
+<!-- Your monitor number = 12 -->
 
 ## ⛅ Warm Up for Day 3.
 
@@ -1546,6 +1546,7 @@ conf t
 ~~~
 !@R4
 conf t
+ no router ospf 1
  router ospf 1
   router-id 4.4.4.4
   network 4.4.4.4 0.0.0.0 area 0
@@ -1767,9 +1768,9 @@ __LSA__ - Link-State Advertisement
 ~~~
 !@EDGE
 conf t
- int lo#$34T#
-  ip add #$34T#.#$34T#.#$34T#.#$34T# 255.255.255.255
-  ip ospf 1 area #$34T#
+ int lo12
+  ip add 12.12.12.12 255.255.255.255
+  ip ospf 1 area 12
   end
 clear ip ospf process
 yes
